@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "peso-bank",
+      "runtimeExecutable": "F:\\CIICC Java NCIII\\Final Output\\peso_bank\\mvnw.cmd",
+      "runtimeArgs": ["spring-boot:run", "-Dspring-boot.run.arguments=--server.port=8090"],
+      "port": 8090
+    },
+    {
+      "name": "peso-bank-frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "front-end"],
+      "port": 3000
+    },
+    {
+      "name": "peso-bank-frontend-preview",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:preview", "--prefix", "front-end"],
+      "port": 3001
+    }
+  ]
+}

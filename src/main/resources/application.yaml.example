@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: peso_bank
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/peso_bank?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: your_db_username
+    password: 'your_db_password'
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
