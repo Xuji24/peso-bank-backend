@@ -13,10 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.server.ResponseStatusException;
 
-/**
- * Applies to every controller. Keeps error responses to a single safe shape
- * so no endpoint accidentally leaks an exception message or stack trace.
- */
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

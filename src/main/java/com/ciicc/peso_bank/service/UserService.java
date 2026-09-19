@@ -52,4 +52,16 @@ public class UserService {
             .map(userMapper::toDto)
             .toList();
     }
+
+    @Transactional(readOnly = true)
+    public UserDto login(String username, String password) {
+        User user = userRepository.findByUsername(username)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid username or password"));
+
+        if (!passwordEncoder.matches(password, user.getPassword())) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid username or password");
+        }
+
+        return userMapper.toDto(user);
+    }
 }
